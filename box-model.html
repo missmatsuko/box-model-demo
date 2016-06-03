@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<link href="style.css" rel="stylesheet"><!--stylesheet-->
+</head>
+<body>
+	<div class="page-wrapper">
+		<div class="form-wrapper column">
+			<h2>Box Model Demo Tool</h2>
+			<form>
+				<div class="form-box-wrapper box-wrapper">
+					<div class="form-content-box box"><p>content</p></div>
+
+					<div class="form-padding-box box">
+						<p>padding</p>
+						<input class="input-top" type="text" name="paddingTop" value="30">
+						<input class="input-right" type="text" name="paddingRight" value="30">
+						<input class="input-bottom" type="text" name="paddingBottom" value="30">
+						<input class="input-left" type="text" name="paddingLeft" value="30">
+					</div>
+
+					<div class="form-border-box box">
+						<p>border</p>
+						<input class="input-top" type="text" name="borderTop" value="30">
+						<input class="input-right" type="text" name="borderRight" value="30">
+						<input class="input-bottom" type="text" name="borderBottom" value="30">
+						<input class="input-left" type="text" name="borderLeft" value="30">
+					</div>
+
+					<div class="form-margin-box box">
+						<p>margin</p>
+						<input class="input-top" type="text" name="marginTop" value="30">
+						<input class="input-right" type="text" name="marginRight" value="30">
+						<input class="input-bottom" type="text" name="marginBottom" value="30">
+						<input class="input-left" type="text" name="marginLeft" value="30">
+					</div>
+				</div>
+
+
+				<div class="form-block">
+					<p>Dimensions:</p>
+					<label>H <input type="text" value="auto" name="contentHeight"></label> 
+					<label>W <input type="text" value="auto" name="contentWidth"></label>
+				</div>
+				<div class="form-block">
+					<p>Box-Sizing:</p>
+					<label><input type="radio" name="boxSizing" value="content-box" title="Default value. Width and height include content only (not padding, border, or margin)." checked> Content-Box</label>
+					<label><input type="radio" name="boxSizing" value="border-box" title="Width and height include content, padding, and border (not margin)."> Border-Box</label>
+				</div>
+				<div class="form-block">
+					<p>Lock Padding:</p>
+					<label><input type="radio" name="lockPadding" value="none" checked title="Default value. Can set unique value for each side."> None</label>
+					<label><input type="radio" name="lockPadding" value="paralell" title="Left-Right and Top-Bottom will always match."> Parallel</label>
+					<label><input type="radio" name="lockPadding" value="all" title="All sides will match."> All</label>
+				</div>
+				<div class="form-block">
+					<p>Lock Border:</p>
+					<label><input type="radio" name="lockBorder" value="none" checked title="Default value. Can set unique value for each side."> None</label>
+					<label><input type="radio" name="lockBorder" value="parallel" title="Left-Right and Top-Bottom will always match."> Parallel</label>
+					<label><input type="radio" name="lockBorder" value="all" title="All sides will match."> All</label>
+				</div>
+				<div class="form-block">
+					<p>Lock Margin:</p>
+					<label><input type="radio" name="lockMargin" value="none" checked title="Default value. Can set unique value for each side."> None</label>
+					<label><input type="radio" name="lockMargin" value="parallel" title="Left-Right and Top-Bottom will always match."> Parallel</label>
+					<label><input type="radio" name="lockMargin" value="all" title="All sides will match."> All</label>
+				</div>
+			</form>
+
+
+		</div><!--form wrapper ends-->
+
+
+		<div class="box-wrapper column">
+			<div class="content-box box"><p>content</p></div>
+
+			<div class="padding-box box"><p>padding</p></div>
+
+			<div class="border-box box"><p>border</p></div>
+			
+			<div class="margin-box box"><p>margin</p></div>
+		</div><!--box wrapper ends-->
+
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
