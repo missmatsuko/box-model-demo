@@ -15,10 +15,16 @@ input[type="text"] {
 	text-align: center;
 }
 
+input:read-only { 
+    background-color: #eee;
+    color: #aaa;
+}
+
 .column {
 	float: left;
 	margin: 0 2em 2em 2em;
 }
+
 
 /*form*/
 .form-block {
