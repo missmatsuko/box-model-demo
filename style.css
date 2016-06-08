@@ -8,6 +8,25 @@ body {
 	font-size: 20px;
 }
 
+input[type="text"] {
+	font-size: 1em;
+	width: 4em;
+	height: 1.5em;
+	text-align: center;
+}
+
+input:read-only { 
+    background-color: #eee;
+    color: #aaa;
+}
+
+.column {
+	float: left;
+	margin: 0 2em 2em 2em;
+}
+
+
+/*form*/
 .form-block {
 	display: block;
 }
@@ -18,26 +37,14 @@ body {
 	font-weight: bold;
 }
 
-input[type="text"] {
-	font-size: 1em;
-	width: 4em;
-	height: 1.5em;
-	text-align: center;
-}
-
 .form-box-wrapper input[type="text"] {
 	width: 2em;
 	height: 2em;
 	border: 1px solid #aaa;
 }
 
-.column {
-	float: left;
-	margin: 0 2em 2em 2em;
-}
 
 /*main box*/
-
 .box-wrapper p {
 	position: absolute;
 	margin: 0;
@@ -165,5 +172,3 @@ input[type="text"] {
 .input-right {
 	right: 0;
 }
-
-
