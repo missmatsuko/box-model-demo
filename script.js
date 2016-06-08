@@ -1,7 +1,6 @@
 //on document ready
 $(document).ready(function(){
 
-	/*WIP****/
 	function lockBox(sides,boxName){
 		//set variables
 		$top = $("."+boxName+".input-top");
@@ -32,7 +31,6 @@ $(document).ready(function(){
 			$left.val(parseInt($top.val()));
 		}
 	}
-	/***/
 
 	function serializeForm(box){
 		$.each($('form').serializeArray(), function() {
@@ -46,7 +44,6 @@ $(document).ready(function(){
 	}
 
 	function setBox(){
-
 		//array to contain proprty names and values from form
 		var box = { };
 
@@ -72,8 +69,8 @@ $(document).ready(function(){
 				$(".content-box").width(box.boxWidth);
 			}
 			var $paddingBoxHeight = $(".content-box").height()+box.paddingTop+box.paddingBottom;
-			var $borderBoxHeight = $paddingBoxHeight+box.borderTop+box.borderBottom;
 			var $paddingBoxWidth = $(".content-box").width()+box.paddingLeft+box.paddingRight;
+			var $borderBoxHeight = $paddingBoxHeight+box.borderTop+box.borderBottom;
 			var $borderBoxWidth = $paddingBoxWidth+box.borderLeft+box.borderRight;
 		}
 
@@ -123,7 +120,6 @@ $(document).ready(function(){
 		var $marginBoxWidth = $borderBoxWidth+box.marginLeft+box.marginRight;
 		$(".margin-box").height($marginBoxHeight);
 		$(".margin-box").width($marginBoxWidth);
-
 	}
 
 	setBox();
