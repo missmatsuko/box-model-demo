@@ -71,7 +71,8 @@ $(document).ready(function(){
 			if($.isNumeric(box.boxWidth)){
 				$(".content-box").width(box.boxWidth);
 			}
-
+			var $paddingBoxHeight = $(".content-box").height()+box.paddingTop+box.paddingBottom;
+			var $borderBoxHeight = $paddingBoxHeight+box.borderTop+box.borderBottom;
 			var $paddingBoxWidth = $(".content-box").width()+box.paddingLeft+box.paddingRight;
 			var $borderBoxWidth = $paddingBoxWidth+box.borderLeft+box.borderRight;
 		}
@@ -100,7 +101,6 @@ $(document).ready(function(){
 		$(".content-box").css('left', $contentBoxLeft);
 
 		//paddingBox size and position
-		var $paddingBoxHeight = $(".content-box").height()+box.paddingTop+box.paddingBottom;
 		var $paddingBoxTop = box.borderTop+box.marginTop;
 		$(".padding-box").height($paddingBoxHeight);
 		$(".padding-box").css('top', $paddingBoxTop);
@@ -110,7 +110,6 @@ $(document).ready(function(){
 		$(".padding-box").css('left', $paddingBoxLeft);
 
 		//borderBox size and position
-		var $borderBoxHeight = $paddingBoxHeight+box.borderTop+box.borderBottom;
 		var $borderBoxTop = box.marginTop;
 		$(".border-box").height($borderBoxHeight);
 		$(".border-box").css('top', $borderBoxTop);
