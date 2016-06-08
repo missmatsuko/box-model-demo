@@ -28,11 +28,11 @@ $(document).ready(function(){
 		//for content-box box-sizing
 		if(box.boxSizing=="content-box"){
 			//dimensions determines content dimensions
-			if($.isNumeric(box.contentHeight)){
-				$(".content-box").height(box.contentHeight);
+			if($.isNumeric(box.boxHeight)){
+				$(".content-box").height(box.boxHeight);
 			}
-			if($.isNumeric(box.contentWidth)){
-				$(".content-box").width(box.contentWidth);
+			if($.isNumeric(box.boxWidth)){
+				$(".content-box").width(box.boxWidth);
 			}
 
 			var $paddingBoxWidth = $(".content-box").width()+box.paddingLeft+box.paddingRight;
@@ -41,14 +41,14 @@ $(document).ready(function(){
 		//for border-box box-sizing
 		else if(box.boxSizing=="border-box"){
 			//dimensions determine border/padding/content combined dimensions
-			if($.isNumeric(box.contentHeight)){
-				$borderBoxHeight = box.contentHeight;
+			if($.isNumeric(box.boxHeight)){
+				$borderBoxHeight = box.boxHeight;
 				$paddingBoxHeight = $borderBoxHeight - box.borderTop - box.borderBottom;
 				$(".content-box").height($paddingBoxHeight - box.paddingTop - box.paddingBottom);
 			}
 
-			if($.isNumeric(box.contentWidth)){
-				$borderBoxWidth = box.contentWidth;
+			if($.isNumeric(box.boxWidth)){
+				$borderBoxWidth = box.boxWidth;
 				$paddingBoxWidth = $borderBoxWidth - box.borderRight - box.borderLeft;
 				$(".content-box").width($paddingBoxWidth - box.paddingRight - box.paddingLeft);
 			}
