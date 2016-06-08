@@ -5,6 +5,8 @@ $(document).ready(function(){
 	function lock(){
 		$("[name='marginBottom']").prop('readonly', true);
 	}
+
+	lock();
 	/***/
 
 	function setBox(){
